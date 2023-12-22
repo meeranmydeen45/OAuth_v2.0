@@ -1,9 +1,11 @@
 ﻿using IdentityServer4.Services;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OauthServer.Models;
+using System.Net.Http;
 using System.Security.Claims;
 
 namespace OauthServer.Controllers

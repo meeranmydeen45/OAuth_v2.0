@@ -40,6 +40,7 @@ namespace OauthServer.Services
                 ClientSecrets = {new Secret(clientSecret.Secrets.Sha256())},
                 AllowedGrantTypes = clientGrantTypes,
                 AllowedScopes = clientScopes,
+                AllowOfflineAccess= true,
 
                 //RedirectUris = { client.RedirectUri },
                 //AlwaysIncludeUserClaimsInIdToken = true,

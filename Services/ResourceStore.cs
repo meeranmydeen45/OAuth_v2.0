@@ -58,8 +58,8 @@ namespace OauthServer.Services
                 {
                     if (!response.Any(x => x.Name == matchedResource.Name))
                     {
-                       // var apiResource = new ApiResource(matchedResource.Name);
-                        var apiResource = new ApiResource(matchedResource.Name, new string[] { "user.role" });
+                        var apiResource = new ApiResource(matchedResource.Name);
+                        //var apiResource = new ApiResource(matchedResource.Name, new string[] { "user.role" });
                         apiResource.Scopes = matchedResource.Scopes;
                         response.Add(apiResource);
                     }
@@ -92,11 +92,6 @@ namespace OauthServer.Services
             {
                new IdentityResources.OpenId(),
                new IdentityResources.Profile(),
-               new IdentityResource()
-               {
-                   Name = "user.claims",
-                   UserClaims= { "user.role" }
-               }
             };
         }
 
